@@ -1,4 +1,6 @@
-setwd("C:/Users/u0149275/OneDrive - KU Leuven/Complexity/EDGe")
+# This is the r script for analyzing the morphological and syntactic complexity datasets
+
+#### load libraries ####
 
 library(readxl)
 library(ggplot2)
