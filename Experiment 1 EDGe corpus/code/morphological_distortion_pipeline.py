@@ -64,7 +64,7 @@ if __name__ == '__main__':
                 new_file.write(new_text)
             # gzip the distorted file
             with open(path + name[0] + '_deletion.txt', 'rb') as in_f, gzip.open(
-                path + name[0] + '_deletion.txt' + '.gz', 'w') as out_f:
+                    path + name[0] + '_deletion.txt' + '.gz', 'w') as out_f:
                 out_f.writelines(in_f)
             # get file size zipped and distorted file
             zipped_distorted_file_size = check_size('path + name[0] + '_deletion.txt.gz')
