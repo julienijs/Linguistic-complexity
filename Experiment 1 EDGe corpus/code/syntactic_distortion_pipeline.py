@@ -38,8 +38,7 @@ def check_size(file):
 if __name__ == '__main__':
     os.chdir(r'C:/Users/EDGe') # insert directory with the files
     my_files = glob.glob('nl*.txt')
-    path = r'C:/Users/EDGe/Zipped'
-    all_unzipped = []
+    path = r'C:/Users/EDGe/Zipped' # insert directory to write the distorted files to
     all_zipped = []
     # iterate over the files
     for my_file in my_files:
@@ -55,7 +54,6 @@ if __name__ == '__main__':
         text = text.read()
         # do 1000 times
         zipped = [my_file]
-        unzipped = [my_file]
         for x in range(1000):
             # randomly delete 10 percent of the characters of the file
             new_text = delete_pct_words(text, 0.1)
@@ -64,27 +62,15 @@ if __name__ == '__main__':
             # write the distorted text to a new file
             with open(path + name[0] + '_deletion.txt', 'w') as new_file:
                 new_file.write(new_text)
-            # get the file size of the distorted file
-            distorted_file_size = check_size('C:/Users/u0149275/Documents/EDGe/EDGe_Workspace/' + name[0] +
-                                             '_deletion.txt')
-            # add the file size of the distorted file to unzipped list
-            unzipped.append(distorted_file_size)
             # gzip the distorted file
-            with open('C:/Users/u0149275/Documents/EDGe/EDGe_Workspace/' + name[0] +
-                      '_deletion.txt', 'rb') as in_f, gzip.open(
-                'C:/Users/u0149275/Documents/EDGe/EDGe_Workspace/' + name[0] +
-                '_deletion.txt' + '.gz', 'w') as out_f:
+            with open(path + name[0] + '_deletion.txt', 'rb') as in_f, gzip.open(
+                    path + name[0] + '_deletion.txt' + '.gz', 'w') as out_f:
                 out_f.writelines(in_f)
             # get file size zipped and distorted file
-            zipped_distorted_file_size = check_size('C:/Users/u0149275/Documents/EDGe/EDGe_Workspace/' + name[0] +
-                                                    '_deletion.txt.gz')
+            zipped_distorted_file_size = check_size(path + name[0] + '_deletion.txt.gz')
             # add the file size of the distorted zipped file to zipped list
             zipped.append(zipped_distorted_file_size)
-        # add unzipped to all_unzipped
-        all_unzipped.append(unzipped)
         # add zipped to all_unzipped
         all_zipped.append(zipped)
-    df_unzipped = pandas.DataFrame(all_unzipped)
     df_zipped = pandas.DataFrame(all_zipped)
-    df_zipped.to_excel('zipped_syntax_nl.xlsx')
-    df_unzipped.to_excel('unzipped_syntax_nl.xlsx')
+    df_zipped.to_excel('synt_zipped_all.xlsx')
