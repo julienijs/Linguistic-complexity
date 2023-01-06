@@ -73,4 +73,4 @@ if __name__ == '__main__':
         # add zipped to all_unzipped
         all_zipped.append(zipped)
     df_zipped = pandas.DataFrame(all_zipped)
-    df_zipped.to_excel('zipped.xlsx')
+    df_zipped.to_excel('morph_zipped_all.xlsx')
