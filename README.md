@@ -4,21 +4,31 @@ Scripts and datasets used and created for measuring linguistic complexity throug
 ## Experiment 1: EDGe corpus
 
 ### Overview of the experiment
-TBA
+more TBA
 
-### Code
-TBA
+The morphological complexity ratio is calculated as follow:
+
+$$ morphological \\ complexity \\ ratio = - {mc \\over c}$$
+
+where mc is the compressed file size in bytes after morphological distortion, and c is the compressed file size in bytes before distortion.
+
+The syntactic complexity ratio or the word order rigidity ratio is calculated as follows:
+
+$$ syntactic \\ complexity \\ ratio = - {sc \\over c}$$
+
+where sc is the compressed file size in bytes after syntactic distortion, and c is the compressed file size in bytes before distortion. 
 
 ### Datasets
-3 datasets:
+The dataset used in this experiment is based on the the multilingual parallel EDGeS Diachronic Bible Corpus (Bouma, Coussé, Dijkstra & van der Sijs 2020). The analysis is limited to one book from the Old and New Testament respectively, i.e. the Book of Genesis and the Gospel of Matthew. More information about the corpus can be found at:
+- Bouma, G., E. Coussé, T. Dijkstra & N. van der Sijs. 2020. The EDGeS diachronic bible corpus. In Proceedings of the 12th international conference on language resources and evaluation, 5232-5239. Paris: ELDA.
+- https://github.com/christos-c/Bible-corpus
+
+3 new datasets were derived from the EDGe corpus:
 - EDGe_Zipped_Sizes.xlsx: contains the sizes of all the files in EDGe when they are zipped
 - morph_zipped_all.xlsx: contains the sizes of all the files in EDGe when they are morphologically distorted and then zipped over 1000 iterations
 - synt_zipped_all.xlsx: contains the sizes of all the files in EDGe when they are syntactically distorted and then zipped over 1000 iterations
 
-Corpus used in this experiment can be found at:
-- Bouma, G., E. Coussé, T. Dijkstra & N. van der Sijs. 2020. The EDGeS diachronic bible corpus. In Proceedings of the 12th international conference on language resources and evaluation, 5232-5239. Paris: ELDA.
-
-### Workflow
+### Workflow & code
 TBA
 
 ## Further references
