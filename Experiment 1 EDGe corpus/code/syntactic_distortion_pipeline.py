@@ -1,3 +1,7 @@
+# This script contains the whole pipeline for syntactically distorting all files in a directory, 
+# zipping them and writing all the zipped file sizes to an excel file
+# Syntactic distortion means that random 10% of the words in a file will be deleted
+
 import glob
 import os
 import random
@@ -6,10 +10,12 @@ import pandas
 import re
 
 
+# split text into tokens
 def tokenize(s: str) -> list[str]:
     return s.split()
 
 
+# randomly deletes 10% of the words in a file
 def delete_pct_words(s: str, pct: float = 0.1) -> str:
     word_patt = r"\b([\w'-]+)\b"
     matched_tokens: list[re.Match] = list(re.finditer(word_patt, s))
@@ -19,12 +25,10 @@ def delete_pct_words(s: str, pct: float = 0.1) -> str:
     matches_to_replace.sort(key=lambda x: x.end(), reverse=True)
     for match in matches_to_replace:
         s = s[:match.start(1)] + s[match.end(1):]
-    # Clean up double spaces
-    # s = re.sub(r"[ ]{2,}", ' ', s)
-    # s = re.sub(r"(\n|^)( )(?=\w)", '', s)
     return s
 
 
+# returns the file size
 def check_size(file):
     file_stats = os.stat(file)
     file_size = file_stats.st_size
@@ -32,11 +36,12 @@ def check_size(file):
 
 
 if __name__ == '__main__':
-    os.chdir(r'C:/Users/u0149275/Documents/EDGe/EDGe_Original')
+    os.chdir(r'C:/Users/EDGe') # insert directory with the files
     my_files = glob.glob('nl*.txt')
-    path = r'C:/Users/u0149275/Documents/EDGe/EDGe_Workspace/'
+    path = r'C:/Users/EDGe/Zipped'
     all_unzipped = []
     all_zipped = []
+    # iterate over the files
     for my_file in my_files:
         # get size of original file
         original_file_size = check_size(my_file)
