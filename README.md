@@ -18,6 +18,9 @@ TBA
 Corpus used in this experiment can be found at:
 - Bouma, G., E. Coussé, T. Dijkstra & N. van der Sijs. 2020. The EDGeS diachronic bible corpus. In Proceedings of the 12th international conference on language resources and evaluation, 5232-5239. Paris: ELDA.
 
+### Workflow
+TBA
+
 ## Further references
 For more about information theory and linguistic complexity see:
 - Ehret, K. 2017. An information-theoretic approach to language complexity: variation in naturalistic corpora. Freiburg: Albert-Ludwig-Universität Freiburg dissertation.
