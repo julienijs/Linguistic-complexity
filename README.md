@@ -13,7 +13,7 @@ TBA
 3 datasets:
 - EDGe_Zipped_Sizes.xlsx: contains the sizes of all the files in EDGe when they are zipped
 - morph_zipped_all.xlsx: contains the sizes of all the files in EDGe when they are morphologically distorted and then zipped over 1000 iterations
-- synt_zipped_all.xlsx: contains the sizes of all the files in EDGe when they are morphologically distorted and then zipped over 1000 iterations
+- synt_zipped_all.xlsx: contains the sizes of all the files in EDGe when they are syntactically distorted and then zipped over 1000 iterations
 
 Corpus used in this experiment can be found at:
 - Bouma, G., E. Coussé, T. Dijkstra & N. van der Sijs. 2020. The EDGeS diachronic bible corpus. In Proceedings of the 12th international conference on language resources and evaluation, 5232-5239. Paris: ELDA.
