@@ -1,5 +1,5 @@
 # This script contains the whole pipeline for morphologically distorting all files in a directory, 
-# zipping them and writing all the file sizes to an excel file
+# zipping them and writing all the zipped file sizes to an excel file
 # Morphological distortion means that random 10% of the characters in a file will be deleted
 
 import glob
