@@ -22,7 +22,6 @@ where sc is the compressed file size in bytes after syntactic distortion, and c 
 The dataset used in this experiment is based on the the multilingual parallel EDGeS Diachronic Bible Corpus (Bouma, Coussé, Dijkstra & van der Sijs 2020). The analysis is limited to one book from the Old and New Testament respectively, i.e. the Book of Genesis and the Gospel of Matthew. More information about the corpus can be found at:
 - Bouma, G., E. Coussé, T. Dijkstra & N. van der Sijs. 2020. The EDGeS diachronic bible corpus. In Proceedings of the 12th international conference on language resources and evaluation, 5232-5239. Paris: ELDA.
 - https://spraakbanken.gu.se/en/projects/complex-verb-constructions
-- https://github.com/christos-c/Bible-corpus
 
 3 new datasets were derived from the EDGe corpus:
 - EDGe_Zipped_Sizes.xlsx: contains the sizes of all the files in EDGe when they are zipped
