@@ -4,15 +4,18 @@ Scripts and datasets used and created for measuring linguistic complexity throug
 ## Experiment 1: EDGe corpus
 
 ### Overview of the experiment
-more TBA
+#### General idea
+We want to access the morphological and syntactic complexity of Dutch, English and German over time using information theoretic metrics.
 
-The morphological complexity ratio is calculated as follow:
+#### Morphological complexity
+Morphological distortion is achieved by randomly deleting 10% of all characters in a file. The morphological complexity ratio is calculated as follow:
 
 $$ morphological \\ complexity \\ ratio = - {mc \\over c}$$
 
 where mc is the compressed file size in bytes after morphological distortion, and c is the compressed file size in bytes before distortion.
 
-The syntactic complexity ratio or the word order rigidity ratio is calculated as follows:
+#### Syntactic complexity
+Syntactic distortion is achieved by randomly deleting 10% of all tokens in a file. The syntactic complexity ratio or the word order rigidity ratio is calculated as follows:
 
 $$ syntactic \\ complexity \\ ratio = - {sc \\over c}$$
 
@@ -39,8 +42,7 @@ TBA
 TBA
 
 #### Step 4: statistical analysis in R
-The output are graphs in .png format.
-TBA
+The statistical analysis of the created datasets (input = EDGe_Zipped_Sizes.xlsx, morph_zipped_all.xlsx and synt_zipped_all.xlsx) is done by running complexity_analysis.R. The script calculates the morphological and syntactic complexity as specified above. The output of this script are graphs in .png format.
 
 ## Further references
 For more about information theory and linguistic complexity see:
