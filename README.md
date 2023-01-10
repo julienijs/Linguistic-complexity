@@ -29,6 +29,17 @@ The dataset used in this experiment is based on the the multilingual parallel ED
 - synt_zipped_all.xlsx: contains the sizes of all the files in EDGe when they are syntactically distorted and then zipped over 1000 iterations
 
 ### Workflow & code
+#### Step 1: create a file with all the file sizes of the zipped files in EDGe - EDGe_Zipped_Sizes.xlsx
+In order to create EDGe_Zipped_Sizes.xlsx first all the files in the dataset need to be zipped. This is done by running gzip_files.py. The second step is retrieving all the file sizes of the zipped files. This is done by running file_size.py on the newly created zipped files.
+
+#### Step 2: morphological distortion - morph_zipped_all.xlsx
+TBA
+
+#### Step 3: syntactic distortion - synt_zipped_all.xlsx
+TBA
+
+#### Step 4: statistical analysis in R
+The output are graphs in .png format.
 TBA
 
 ## Further references
