@@ -36,13 +36,13 @@ The dataset used in this experiment is based on the the multilingual parallel ED
 In order to create EDGe_Zipped_Sizes.xlsx first all the files in the dataset need to be zipped. This is done by running gzip_files.py. The second step is retrieving all the file sizes of the zipped files. This is done by running file_size.py on the newly created zipped files.
 
 #### Step 2: morphological distortion - morph_zipped_all.xlsx
-TBA
+In this step all files are first morphologically distorted and subsequently zipped. Morphological distortion is achieved as described above, by randomly deleting 10% of all characters in the file. For each file this is done 1000 times and each time the size of the file is stored in morph_zipped_all.xlsx. This step requires morphological_distortion_pipeline.py.
 
 #### Step 3: syntactic distortion - synt_zipped_all.xlsx
-TBA
+In this step all files are first syntactically distorted and subsequently zipped. Syntactic distortion is achieved as described above, by randomly deleting 10% of all words in the file. For each file this is done 1000 times and each time the size of the file is stored in synt_zipped_all.xlsx. This step requires syntactic_distortion_pipeline.py.
 
 #### Step 4: statistical analysis in R
-The statistical analysis of the created datasets (input = EDGe_Zipped_Sizes.xlsx, morph_zipped_all.xlsx and synt_zipped_all.xlsx) is done by running complexity_analysis.R. The script calculates the morphological and syntactic complexity as specified above. The output of this script are graphs in .png format.
+The statistical analysis of the created datasets (input = EDGe_Zipped_Sizes.xlsx, morph_zipped_all.xlsx and synt_zipped_all.xlsx) is done by running complexity_analysis.R. The script calculates the morphological and syntactic complexity as described above. The output of this script are graphs in .png format.
 
 ## Further references
 For more about information theory and linguistic complexity see:
