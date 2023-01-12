@@ -3,12 +3,12 @@ Scripts and datasets used and created for measuring linguistic complexity throug
 
 Following Juola (2008) and Ehret (2018) this project relies on Kolmogorov complexity to compare the morphological and syntactic complexity of three West-Germanic languages: Dutch, English and German. Kolmogorov complexity is an information-theoretic notion that tries to define the complexity of a string in relation to its information content. Kolmogorov essentially tried to define randomness: for any random data D of length |D|, there is an algorithm of length |D|+δ that outputs (or describes) it, where δ is that which needs to be added to D to output it. In other words, |D|+δ is the length of the shortest algorithm that describes D. If a shorter algorithm exist, then that means that the data D still contains some regularity and thus it can be compressed further using that regularity. The Kolmogorov complexity K(D) of some random data D can thus be defined as the length of the shortest algorithm that describes D.
 
-Applied to language, Kolmogorov complexity defines the complexity of a text as the length of the shortest possible description of this text. When comparing the complexity of two different objects, one can try to describe the object, while being as concise as possible. The more words are needed to describe the object, the more complex this object is. An object is as complex as its shortest description. The object with the shortest most concise description is less complex, while the object with the longer most concise description is more complex. The complexity of two texts can be compared in the same way, as illustrated in the following example:
+Applied to language, Kolmogorov complexity defines the complexity of a text as the length of the shortest possible description of this text. When comparing the complexity of two different objects, one can try to describe the object, while being as concise as possible. The more words are needed to describe the object, the more complex this object is. An object is as complex as its shortest description. The object with the shortest most concise description is less complex, while the object with the longest most concise description is more complex. The complexity of two texts can be compared in the same way, as illustrated in the following example:
 
 - abababab = 4*ab --> less complex
-- agderjip = agderjip --> more complex
+- agvderjip = agvderjip --> more complex
 
-The idea is then that a text that can be more easiliy compressed (by a compression program such as gzip) is linguistically less complex. The morphological and syntactic complexity of a text can then be assessed by distorting the morphological and syntactic structure of the text.
+Kolmogorov complexity can be approximated by compression algorithms, such as gzip. Compression algorithms go through a text, store seen strings in a temporary lexicon and classify new strings on the basis of this lexicon. They detect structural surface regularities and achieve compression by summarizing these regularieties. The morphological and syntactic complexity of a text can then be assessed by distorting the morphological and syntactic structure of the text and compressing the text afterwards. The idea is then that a text which can be more easiliy compressed by a compression algorithm is linguistically less complex. 
 
 ## Experiment 1: EDGe corpus
 
@@ -17,14 +17,14 @@ The idea is then that a text that can be more easiliy compressed (by a compressi
 The first experiment calculates the morphological and syntactic complexity of Dutch, English and German over time using information theoretic metrics.
 
 #### Morphological complexity
-Morphological distortion is achieved by randomly deleting 10% of all characters in a file. The morphological complexity ratio is calculated as follow:
+Morphological distortion is achieved by randomly deleting 10% of all characters in a file. This operation leads to a higher amount of unique strings than before distortion and thus worse compressibility. A text with relatively high morphological complexity exhibits a relatively high amount of unique strings even before distortion. Its compressibility therefore is comparatively less affected by distortion than that of a text with relatively low morphological complexity and a relatively low amount of unique strings. The morphological complexity ratio is calculated as follow:
 
 $$ morphological \\ complexity \\ ratio = - {mc \\over c}$$
 
 where mc is the compressed file size in bytes after morphological distortion, and c is the compressed file size in bytes before distortion.
 
 #### Syntactic complexity
-Syntactic distortion is achieved by randomly deleting 10% of all tokens in a file. The syntactic complexity ratio or the word order rigidity ratio is calculated as follows:
+Syntactic distortion is achieved by randomly deleting 10% of all tokens in a file. This operation disrupts the word order rules and leads to a higher amount of unique strings and comparatively worse compressibility than before distortion. Languages with strict word order rules will be more affected because of their high level of structural surface redundancies. In the Kolmogorov sense, these are the syntactically complex languages. Languages with free word order and a therefore low number of redundancies will be less affected. The syntactic complexity ratio or the word order rigidity ratio is calculated as follows:
 
 $$ syntactic \\ complexity \\ ratio = - {sc \\over c}$$
 
