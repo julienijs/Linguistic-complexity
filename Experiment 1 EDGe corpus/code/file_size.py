@@ -22,7 +22,7 @@ def get_language(file):
     elif file_language == 'de':
         return 'German'
     else:
-        return 'XXX'
+        return none
 
 
 # definition that returns the year based on the filename
