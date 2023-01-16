@@ -53,8 +53,13 @@ In this step all files are first syntactically distorted and subsequently zipped
 #### Step 4: statistical analysis in R
 The statistical analysis of the created datasets (input = EDGe_Zipped_Sizes.xlsx, morph_zipped_all.xlsx and synt_zipped_all.xlsx) is done by running complexity_analysis.R. The script calculates the morphological and syntactic complexity as described above. The output of this script are graphs in .png format.
 
+### Result
+![Syntactic vs morphological complexity ratio](https://user-images.githubusercontent.com/107923146/212687027-2c4eaac4-89a9-45b5-b8bf-000191aa7c16.png)
+
+
 ## References
 For more about information theory and linguistic complexity see:
 - Ehret, K. 2017. An information-theoretic approach to language complexity: variation in naturalistic corpora. Freiburg: Albert-Ludwig-Universität Freiburg dissertation.
 - Juola, P. 2008. Assessing linguistic complexity. In M. Miestamo, K. Sinnemäki & F. Karlsson (eds.), Language complexity: typology, contact, change, 89-108. Amsterdam: John Benjamins.
 - Kolmogorov, A. Ni. 1968. Three approaches to the quantitative definition of information. International Journal of Computer Mathematics 2(1-4). 157-168. doi:10.1080/00207166808803030.
+
