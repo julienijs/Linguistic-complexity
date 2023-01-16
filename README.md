@@ -57,7 +57,7 @@ The statistical analysis of the created datasets (input = EDGe_Zipped_Sizes.xlsx
 ![Syntactic vs morphological complexity ratio](https://user-images.githubusercontent.com/107923146/212687027-2c4eaac4-89a9-45b5-b8bf-000191aa7c16.png)
 
 ## Experiment 2: pragmatic complexity EDGe corpus
-Comming soon!
+Coming soon!
 
 ## References
 For more about information theory and linguistic complexity see:
