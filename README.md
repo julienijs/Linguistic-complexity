@@ -26,7 +26,7 @@ where mc is the compressed file size in bytes after morphological distortion, an
 #### Syntactic complexity
 Syntactic distortion is achieved by randomly deleting 10% of all tokens in a file. This operation disrupts the word order rules and leads to a higher amount of unique strings and comparatively worse compressibility than before distortion. Languages with strict word order rules will be more affected because of their high level of structural surface redundancies. In the Kolmogorov sense, these are the syntactically complex languages. Languages with free word order and a therefore low number of redundancies will be less affected. The syntactic complexity ratio or the word order rigidity ratio is calculated as follows:
 
-$$ syntactic \\ complexity \\ ratio = - {sc \\over c}$$
+$$ syntactic \\ complexity \\ ratio = {sc \\over c}$$
 
 where sc is the compressed file size in bytes after syntactic distortion, and c is the compressed file size in bytes before distortion. 
 
