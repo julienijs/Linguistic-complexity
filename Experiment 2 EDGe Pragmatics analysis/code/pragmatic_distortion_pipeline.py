@@ -20,9 +20,9 @@ def check_size(file):
 
 
 if __name__ == '__main__':
-    os.chdir(r'C:/Users/u0149275/OneDrive - KU Leuven/Complexity/EDGe/EDGe_Original')
-    my_files = glob.glob('*.txt')
-    path = r'C:/Users/u0149275/OneDrive - KU Leuven/Complexity/EDGe/EDGe_Workspace/'
+    os.chdir(r'C:/Users/EDGe')
+    my_files = glob.glob('*.txt') # insert own directory
+    path = r'C:/Users/EDGe/EDGe_Workspace/' # insert own directory
     all_zipped = []
     all_unzipped = []
     for my_file in my_files:
