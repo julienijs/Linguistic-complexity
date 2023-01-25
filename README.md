@@ -57,7 +57,22 @@ The statistical analysis of the created datasets (input = EDGe_Zipped_Sizes.xlsx
 ![Syntactic vs morphological complexity ratio](https://user-images.githubusercontent.com/107923146/212687027-2c4eaac4-89a9-45b5-b8bf-000191aa7c16.png)
 
 ## Experiment 2: pragmatic complexity EDGe corpus
-Coming soon!
+### Overview of the experiment
+#### General idea
+TBA
+
+#### Pragmatic complexity
+Pragmatic distortion is achieved by randomly deleting 10% of all the verses in a file. The pragmatic complexity ratio is calculated as follow:
+
+$$ Pragmatic \\ complexity \\ ratio = {pc \\over c}$$
+
+where pc is the compressed file size in bytes after pragmatic distortion, and c is the compressed file size in bytes before distortion.
+
+### Datasets
+TBA
+
+### Workflow & code
+TBA
 
 ## References
 For more about information theory and linguistic complexity see:
