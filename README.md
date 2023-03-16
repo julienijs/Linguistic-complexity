@@ -59,7 +59,7 @@ The statistical analysis of the created datasets (input = EDGe_Zipped_Sizes.xlsx
 ## Experiment 2: pragmatic complexity EDGe corpus
 ### Overview of the experiment
 #### General idea
-TBA
+The idea behind this experiment is to compute pragmatic complexity in the same way as morphological and syntactic complexity in experiment 1. Morphological distortion was achieved by randomly deleting 10% of the characters from words. Syntactic distortion was achieved by randomly deleting 10% of the words from sentences. Similarly, pragmatic distortion will be achieved by randomly deleting 10% of the sentences from the document. At least in theory this would result in the distortion of the relationship between an antcedent and its proform. Moreover, when sentences are removed from a text, it becomes harder to follow the discourse.
 
 #### Pragmatic complexity
 Pragmatic distortion is achieved by randomly deleting 10% of all the verses in a file. The pragmatic complexity ratio is calculated as follow:
