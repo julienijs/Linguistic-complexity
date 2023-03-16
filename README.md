@@ -69,10 +69,17 @@ $$ Pragmatic \\ complexity \\ ratio = {pc \\over c}$$
 where pc is the compressed file size in bytes after pragmatic distortion, and c is the compressed file size in bytes before distortion.
 
 ### Datasets
-TBA
+The dataset for this experiment is the same one as the dataset in experiment 1: the Book of Genesis and the Gospel of Matthew in the EDGe corpus. One new dataset was derived from this corpus: pragm_zipped_all.xlsx, which contains the sizes of all the files in EDGe when they are pragmatically distorted and then zipped over 1000 iterations
 
 ### Workflow & code
-TBA
+Step 1: pragmatic distortion - pragm_zipped_all.xlsx
+All files are first pragmatically distorted and subsequently zipped. Pragmatic distortion is achieved as described above, by randomly deleting 10% of all sentences in the file. For each file this is done 1000 times and each time the size of the file is stored in pragm_zipped_all.xlsx. This step requires pragmatic_distortion_pipeline.py.
+
+Step 2: statistical analysis in R
+The statistical analysis of the created datasets (input = EDGe_Zipped_Sizes.xlsx and pragm_zipped_all.xlsx) is done by running pragmatic_analysis.R. The script calculates the pragmatic complexity ratio as described above. The output of this script are graphs in .png format.
+
+### Result
+![Pragmatic complexity ratio over time](https://user-images.githubusercontent.com/107923146/225670551-c05d8fe6-a00c-488a-87c9-eeec0879994d.png)
 
 ## References
 For more about information theory and linguistic complexity see:
