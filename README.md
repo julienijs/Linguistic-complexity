@@ -76,7 +76,7 @@ Step 1: pragmatic distortion - pragm_zipped_all.xlsx
 All files are first pragmatically distorted and subsequently zipped. Pragmatic distortion is achieved as described above, by randomly deleting 10% of all sentences in the file. For each file this is done 1000 times and each time the size of the file is stored in pragm_zipped_all.xlsx. This step requires pragmatic_distortion_pipeline.py.
 
 Step 2: statistical analysis in R
-The statistical analysis of the created datasets (input = EDGe_Zipped_Sizes.xlsx and pragm_zipped_all.xlsx) is done by running pragmatic_analysis.R. The script calculates the pragmatic complexity ratio as described above. The output of this script are graphs in .png format.
+The statistical analysis of the created datasets (input = EDGe_Zipped_Sizes.xlsx (reused from experiment 1) and pragm_zipped_all.xlsx) is done by running pragmatic_analysis.R. The script calculates the pragmatic complexity ratio as described above. The output of this script are graphs in .png format.
 
 ### Result
 ![Pragmatic complexity ratio over time](https://user-images.githubusercontent.com/107923146/225670551-c05d8fe6-a00c-488a-87c9-eeec0879994d.png)
