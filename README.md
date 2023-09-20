@@ -87,3 +87,5 @@ For more about information theory and linguistic complexity see:
 - Juola, P. 2008. Assessing linguistic complexity. In M. Miestamo, K. Sinnemäki & F. Karlsson (eds.), *Language complexity: typology, contact, change*, 89-108. Amsterdam: John Benjamins.
 - Kolmogorov, A. Ni. 1968. Three approaches to the quantitative definition of information. *International Journal of Computer Mathematics 2*(1-4). 157-168. doi:10.1080/00207166808803030.
 
+Own research output:
+- Nijs, Julie; Van de Velde, Freek; Cuyckens, Hubert; 2023. An information-theoretic approach to morphological and syntactic complexity in Dutch, English and German. 
