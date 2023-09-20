@@ -88,4 +88,4 @@ For more about information theory and linguistic complexity see:
 - Kolmogorov, A. Ni. 1968. Three approaches to the quantitative definition of information. *International Journal of Computer Mathematics 2*(1-4). 157-168. doi:10.1080/00207166808803030.
 
 Own research output:
-- Nijs, Julie; Van de Velde, Freek; Cuyckens, Hubert; 2023. An information-theoretic approach to morphological and syntactic complexity in Dutch, English and German. 
+- Nijs, Julie; Van de Velde, Freek; Cuyckens, Hubert; 2023. An information-theoretic approach to morphological and syntactic complexity in Dutch, English and German. [abstract](https://kuleuven.limo.libis.be/discovery/search?query=any,contains,LIRIAS4078820&tab=LIRIAS&search_scope=lirias_profile&vid=32KUL_KUL:Lirias&offset=0)
