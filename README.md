@@ -10,8 +10,6 @@ Applied to language, Kolmogorov complexity defines the complexity of a text as t
 
 Kolmogorov complexity can be approximated by compression algorithms, such as gzip. Compression algorithms go through a text, store seen strings in a temporary lexicon and classify new strings on the basis of this lexicon. They detect structural surface regularities and achieve compression by summarizing these regularieties. The morphological and syntactic complexity of a text can then be assessed by distorting the morphological and syntactic structure of the text and compressing the text afterwards. The idea is then that a text which can be more easiliy compressed by a compression algorithm is linguistically less complex. 
 
-## Experiment 1: EDGe corpus
-
 ### Overview of the experiment
 #### General idea
 The first experiment calculates the morphological and syntactic complexity of Dutch, English and German over time using information theoretic metrics.
@@ -55,31 +53,6 @@ The statistical analysis of the created datasets (input = EDGe_Zipped_Sizes.xlsx
 
 ### Result
 ![Syntactic vs morphological complexity ratio](https://user-images.githubusercontent.com/107923146/212687027-2c4eaac4-89a9-45b5-b8bf-000191aa7c16.png)
-
-## Experiment 2: pragmatic complexity EDGe corpus
-### Overview of the experiment
-#### General idea
-The idea behind this experiment is to compute pragmatic complexity in the same way as morphological and syntactic complexity in experiment 1. Morphological distortion was achieved by randomly deleting 10% of the characters from words. Syntactic distortion was achieved by randomly deleting 10% of the words from sentences. Similarly, pragmatic distortion will be achieved by randomly deleting 10% of the sentences from the document. At least in theory this would result in the distortion of the relationship between an antcedent and its proform. Moreover, when sentences are removed from a text, it becomes harder to follow the discourse.
-
-#### Pragmatic complexity
-Pragmatic distortion is achieved by randomly deleting 10% of all the verses in a file. The pragmatic complexity ratio is calculated as follow:
-
-$$ Pragmatic \\ complexity \\ ratio = {pc \\over c}$$
-
-where pc is the compressed file size in bytes after pragmatic distortion, and c is the compressed file size in bytes before distortion.
-
-### Datasets
-The dataset for this experiment is the same one as the dataset in experiment 1: the Book of Genesis and the Gospel of Matthew in the EDGe corpus. One new dataset was derived from this corpus: pragm_zipped_all.xlsx, which contains the sizes of all the files in EDGe when they are pragmatically distorted and then zipped over 1000 iterations
-
-### Workflow & code
-Step 1: pragmatic distortion - pragm_zipped_all.xlsx
-All files are first pragmatically distorted and subsequently zipped. Pragmatic distortion is achieved as described above, by randomly deleting 10% of all sentences in the file. For each file this is done 1000 times and each time the size of the file is stored in pragm_zipped_all.xlsx. This step requires pragmatic_distortion_pipeline.py.
-
-Step 2: statistical analysis in R
-The statistical analysis of the created datasets (input = EDGe_Zipped_Sizes.xlsx (reused from experiment 1) and pragm_zipped_all.xlsx) is done by running pragmatic_analysis.R. The script calculates the pragmatic complexity ratio as described above. The output of this script are graphs in .png format.
-
-### Result
-![Pragmatic complexity ratio over time](https://user-images.githubusercontent.com/107923146/225670551-c05d8fe6-a00c-488a-87c9-eeec0879994d.png)
 
 ## References
 For more about information theory and linguistic complexity see:
