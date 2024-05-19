@@ -45,4 +45,4 @@ if __name__ == '__main__':
         my_dict["year"].append(int(year)) # append year to dict
         my_dict["size"].append(size) # append size to dict
     data = pandas.DataFrame.from_dict(my_dict)
-    data.to_excel('File_Sizes.xlsx')
+    data.to_excel('EDGe_Zipped_Sizes.xlsx')
