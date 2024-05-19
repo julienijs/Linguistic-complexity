@@ -1,3 +1,9 @@
+# This script contains the whole pipeline for morphologically distorting all files in a directory, 
+# zipping them and writing all the zipped file sizes to an excel file
+# Morphological distortion means that random 10% of the characters in a file will be deleted
+# In this script we only target the last three characters of words that are at least three characters long
+# This approximates distorting suffixes
+
 import glob
 import os
 import math
